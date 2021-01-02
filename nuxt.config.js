@@ -64,6 +64,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // https://github.com/nuxt-community/google-analytics-module
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -100,7 +102,15 @@ export default {
     keywords,
   },
 
-  // Private environment variable (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
+  // public environment variable (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
+  // hard-coded during the build once only.
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+  },
+
+  // Private environment variable  (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
   privateRuntimeConfig: {
     // apiSecretKey etc
   },
