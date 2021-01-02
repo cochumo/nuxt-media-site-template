@@ -24,7 +24,8 @@
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-a2b": "^0.2.2"
   },
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
