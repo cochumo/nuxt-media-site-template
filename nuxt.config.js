@@ -36,4 +36,10 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // The router property lets you customize Nuxt.js router (https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router)
+  router: {
+    trailingSlash: true,
+    middleware: ['redirect'],
+  },
 }
