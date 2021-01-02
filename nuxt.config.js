@@ -1,11 +1,52 @@
+// 一般
+const siteName = 'サイト名入ります'
+const siteUrl = '' // スラあり
+const baseUrl = '' // スラなし
+const domain = '' // ドメイン
+const restApi = '' // REST API URLの共通部分
+
+// head周り
+const title = 'タイトル入ります'
+const titleTemplate = `｜${title}`
+const description = ''
+const keywords = ''
+const ogpImage = ''
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
+  htmlAttrs: {
+    lang: 'ja',
+  },
   head: {
-    title: 'nuxt-media-site-template',
+    title,
+    titleTemplate: '%s' + titleTemplate,
     meta: [
       { charset: 'utf-8' },
+      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        name: 'format-detection',
+        content: 'telephone=no, email=no, address=no',
+      },
+      { hid: 'description', name: 'description', content: description },
+      { hid: 'keywords', name: 'keywords', content: keywords },
+      { hid: 'og:site_name', property: 'og:site_name', content: siteName },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: siteUrl },
+      { hid: 'og:title', property: 'og:title', content: title },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: description,
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: ogpImage,
+      },
+    ],
+    script: [
+      { src: '//polyfill.io/v2/polyfill.min.js?features=IntersectionObserver' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
