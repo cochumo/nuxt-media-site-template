@@ -85,4 +85,21 @@ export default {
     trailingSlash: true,
     middleware: ['redirect'],
   },
+
+  // public environment variable (https://github.com/nuxt-community/dotenv-module)
+  env: {
+    siteName,
+    siteUrl,
+    baseUrl,
+    domain,
+    restApi,
+    title,
+    description,
+    keywords,
+  },
+
+  // Private environment variable (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
+  privateRuntimeConfig: {
+    // apiSecretKeyなど
+  },
 }
