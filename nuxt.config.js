@@ -72,6 +72,8 @@ export default {
     '@nuxtjs/axios',
     // https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // https://github.com/nuxt-community/sitemap-module
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -100,6 +102,21 @@ export default {
 
   // Private environment variable (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
   privateRuntimeConfig: {
-    // apiSecretKeyなど
+    // apiSecretKey etc
+  },
+
+  // sitemap settings (https://github.com/nuxt-community/sitemap-module)
+  sitemap: {
+    hostname: baseUrl,
+    gzip: true,
+    cacheTime: 1000 * 60 * 15,
+    defaults: {
+      priority: 1,
+      lastmod: new Date(),
+    },
+    exclude: [],
+    routes: [
+      // Get a dynamic route with axios
+    ],
   },
 }
