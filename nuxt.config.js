@@ -76,6 +76,8 @@ export default {
     '@nuxtjs/dotenv',
     // https://github.com/nuxt-community/sitemap-module
     '@nuxtjs/sitemap',
+    // https://github.com/nuxt-community/gtm-module
+    '@nuxtjs/gtm',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -105,8 +107,16 @@ export default {
   // public environment variable (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
   // hard-coded during the build once only.
   publicRuntimeConfig: {
+    // Google Analytics settings (https://github.com/nuxt-community/google-analytics-module)
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+    // Google Tag Manager settings (https://github.com/nuxt-community/gtm-module)
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID,
+      pageTracking: false,
+      layer: 'dataLayer',
+      variables: {},
     },
   },
 
