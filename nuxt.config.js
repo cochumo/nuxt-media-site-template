@@ -58,6 +58,8 @@ export default {
   plugins: [
     // https://github.com/fromAtoB/vue-a2b
     { src: '@/plugins/vue-a2b', mode: 'client' },
+    // https://github.com/logaretm/vee-validate
+    '@/plugins/vee-validate',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
